@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "flower-shop"
+version = "0.1.0"
+description = ""
+authors = ["Oleg Kishinskii <oleg.kishinskiy@gmail.com>"]
+readme = "README.md"
+packages = [{include = "flower_shop"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2"
+ipython = "^8.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
