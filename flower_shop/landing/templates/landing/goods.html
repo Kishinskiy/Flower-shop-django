@@ -1,0 +1,24 @@
+{% extends "layout/basic.html" %}
+{% block title %}{{ current_rubric.name }}{% endblock %}
+{% block goods %}
+<div class="populate">
+      <div class="container">
+        <h2 class="section_title">Популярные товары</h2>
+        <div class="populate__cards">
+          {% for item in items %}
+          <div class="populate__cards__item card">
+            <div class="sale"></div>
+            <div class="new"></div>
+            <img class="card__image" src="{% static 'img/goods.png' %}" alt="" />
+            <div class="rating"></div>
+            <div class="card__description">
+              <div class="card__description__text">Baby Breathes</div>
+              <div class="card__price">500р</div>
+            </div>
+            <button class="btn card__btn">В корзину</button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

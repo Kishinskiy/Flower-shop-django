@@ -28,7 +28,7 @@ def by_rubric(request, rubric_id):
         'rubrics': rubrics
     }
 
-    return render(request, 'landing/by_rubric.html', context)
+    return render(request, 'landing/goods.html', context)
 
 
 class BbCreateView(CreateView):

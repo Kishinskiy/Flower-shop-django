@@ -1,11 +1,16 @@
 {% extends "layout/basic.html" %}
 {% block content %}
-    {% for bb in bbs %}
-    <div>
-        <h2>{{ bb.title }}</h2>
-        <p>{{ bb.content }}</p>
-        <p><a href="{% url 'by_rubric' bb.rubric.pk %}">{{ bb.rubric.name }}</a></p>
-        <p>{{ bb.publish_date|date:"d.m.Y H:i:s" }}</p>
+{% load static %}
+    <div class="slider">
+      <div class="container">
+        <div class="slider__wrapper">
+          <div class="slider__title">
+            Свежие цветы на праздник и день рождения
+          </div>
+          <div class="slider__price"><span>500p.</span>&nbsp;- 300р.</div>
+          <button class="btn slider__btn">Выбрать букет</button>
+        </div>
+        <img src="{% static 'img/flowers-1.png' %}" alt="" class="slider__img" />
+      </div>
     </div>
-    {% endfor %}
 {% endblock %}
