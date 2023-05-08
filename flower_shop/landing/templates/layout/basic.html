@@ -72,11 +72,29 @@
         </nav>
       </div>
     </header>
-    {%block content%}
-    {% endblock %}
-    {% block goods %}
+    {% block content %}
     {% endblock %}
 
+    <div class="populate">
+      <div class="container">
+        <h2 class="section_title">Популярные товары</h2>
+        <div class="populate__cards">
+          {% for item in items %}
+          <div class="populate__cards__item card">
+            <div class="sale"></div>
+            <div class="new"></div>
+            <img class="card__image" src="{{ item.image.url }}" alt="" />
+            <div class="rating"></div>
+            <div class="card__description">
+              <div class="card__description__text">{{ item.title }}</div>
+              <div class="card__price">{{ item.price}} руб.</div>
+            </div>
+            <button class="btn card__btn">В корзину</button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container">

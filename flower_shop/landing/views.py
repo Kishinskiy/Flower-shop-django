@@ -12,7 +12,7 @@ def home(request):
     bbs = Bb.objects.all()
     rubrics = Rubric.objects.all()
     context = {
-        'bbs': bbs,
+        'items': bbs,
         'rubrics': rubrics
     }
     return render(request, 'landing/index.html', context)

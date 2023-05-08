@@ -10,6 +10,7 @@ packages = [{include = "flower_shop"}]
 python = "^3.11"
 django = "^4.2"
 ipython = "^8.13.1"
+pillow = "^9.5.0"
 
 
 [build-system]
