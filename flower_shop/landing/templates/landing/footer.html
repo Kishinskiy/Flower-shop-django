@@ -1,4 +1,7 @@
 {% load static %}
+{% extends "landing/index.html" %}
+{% block title %}{{ current_rubric.name }}{% endblock %}
+{% block footer %}
 <div class="subscribe">
   <h2 class="subscribe__title">Подпишись на наши новости</h2>
   <form action="" class="subscribe__form">
@@ -77,7 +80,7 @@
     <div class="contacts">
       <h2 class="contacts__title">Контакты</h2>
       <ul class="contacts__list">
-        <li class="contacts__list__item"><img src="{% static 'icons/Message.svg' %}" alt=""><a class="contacts__list__link" href="">info@flowersandtoys.ru</a></li>
+        <li class="contacts__list__item"><img src="{% static 'icons/Message.svg' %}" alt=""><a class="contacts__list__link" href="">{{ mail }}</a></li>
         <li class="contacts__list__item"><img src="{% static 'icons/Pin_alt.svg' %}" alt=""><a class="contacts__list__link" href="">Москва, ул. Первомайская д. 100</a></li>
         <li class="contacts__list__item"><img src="{% static 'icons/Phone_fill.svg' %}" alt=""><a class="contacts__list__link" href="">+79914025052 &nbsp;</a>
           <a href="" class="contacts__list__link">+79990955411</a></li>
@@ -88,3 +91,4 @@
 </div>
 <hr>
 <div class="copyright">&copy; Copyright 2022, All Rights Reserved</div>
+{% endblock %}

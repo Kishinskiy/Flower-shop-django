@@ -18,6 +18,10 @@ def home(request):
     return render(request, 'landing/index.html', context)
 
 
+def header(request):
+    return render(request, 'landing/header.html')
+
+
 def by_rubric(request, rubric_id):
     bbs = Bb.objects.filter(rubric=rubric_id)
     rubrics = Rubric.objects.all()
@@ -32,7 +36,13 @@ def by_rubric(request, rubric_id):
 
 
 def footer(request):
-    render(request, 'landing/footer.html')
+    context = {
+        'mail': 'info@flowersandtoys.ru',
+        'address': 'Москва, ул. Первомайская д. 100',
+        'phones': ['+79914025052'
+                   '+79990955411']
+    }
+    render(request, 'landing/footer.html', context)
 
 
 class BbCreateView(CreateView):
