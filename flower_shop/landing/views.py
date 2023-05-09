@@ -13,13 +13,14 @@ def home(request):
     rubrics = Rubric.objects.all()
     context = {
         'items': bbs,
-        'rubrics': rubrics
+        'rubrics': rubrics,
+        'mail': 'info@flowersandtoys.ru',
+        'address': 'Москва, ул. Первомайская д. 100',
+        'phones': ['+79914025052'
+                   '+79990955411']
     }
     return render(request, 'landing/index.html', context)
 
-
-def header(request):
-    return render(request, 'landing/header.html')
 
 
 def by_rubric(request, rubric_id):
@@ -35,14 +36,6 @@ def by_rubric(request, rubric_id):
     return render(request, 'landing/goods.html', context)
 
 
-def footer(request):
-    context = {
-        'mail': 'info@flowersandtoys.ru',
-        'address': 'Москва, ул. Первомайская д. 100',
-        'phones': ['+79914025052'
-                   '+79990955411']
-    }
-    render(request, 'landing/footer.html', context)
 
 
 class BbCreateView(CreateView):

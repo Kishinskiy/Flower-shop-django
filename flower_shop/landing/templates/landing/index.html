@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+{% include "landing/header.html" %}
     <div class="slider">
       <div class="container">
         <div class="slider__wrapper">
@@ -13,4 +14,6 @@
         <img src="{% static 'img/flowers-1.png' %}" alt="" class="slider__img" />
       </div>
     </div>
+{% include "landing/goods.html" %}
+{% include "landing/footer.html" %}
 {% endblock %}

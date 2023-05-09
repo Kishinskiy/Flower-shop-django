@@ -1,94 +1,97 @@
 {% load static %}
-{% extends "landing/index.html" %}
-{% block title %}{{ current_rubric.name }}{% endblock %}
-{% block footer %}
-<div class="subscribe">
-  <h2 class="subscribe__title">Подпишись на наши новости</h2>
-  <form action="" class="subscribe__form">
-    <input type="text" class="subscribe__form__input" placeholder="Укажите вашу почту..." >
-    <button class="submit subscribe__form__btn btn">Подписаться</button>
-  </form>
-</div>
-<hr class="footer__hr" />
-<div class="footer__content">
-  <div class="footer__content__left">
-    <div class="information">
-      <div class="footer__content__title">Информация</div>
-      <ul class="footer__content__menu">
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">О нас</a>
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link"
-          >Условия доставки</a
-          >
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link"
-          >Политика конфиденциальности</a
-          >
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link"
-          >Акции и скидки</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="Profile">
-      <div class="footer__content__title">Профиль</div>
-      <ul class="footer__content__menu">
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link"
-          >Профиль пользователя</a
-          >
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">Заказы</a>
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">Доставки</a>
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">Избранное</a>
-        </li>
-      </ul>
-    </div>
-    <div class="Shop">
-      <div class="footer__content__title">Магазин</div>
-      <ul class="footer__content__menu">
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">Цветы</a>
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link"
-          >Мягкие игрушки</a
-          >
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">Подарки</a>
-        </li>
-        <li class="footer__content__menu__item">
-          <a href="" class="footer__content__menu__link">Распродажи</a>
-        </li>
-      </ul>
-    </div>
-    <div class="vl"></div>
-  </div>
+<footer class="footer">
+    <div class="container">
+        <div class="subscribe">
+            <h2 class="subscribe__title">Подпишись на наши новости</h2>
+            <form action="" class="subscribe__form">
+                <input type="text" class="subscribe__form__input" placeholder="Укажите вашу почту...">
+                <button class="submit subscribe__form__btn btn">Подписаться</button>
+            </form>
+        </div>
+        <hr class="footer__hr"/>
+        <div class="footer__content">
+            <div class="footer__content__left">
+                <div class="information">
+                    <div class="footer__content__title">Информация</div>
+                    <ul class="footer__content__menu">
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">О нас</a>
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link"
+                            >Условия доставки</a
+                            >
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link"
+                            >Политика конфиденциальности</a
+                            >
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link"
+                            >Акции и скидки</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="Profile">
+                    <div class="footer__content__title">Профиль</div>
+                    <ul class="footer__content__menu">
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link"
+                            >Профиль пользователя</a
+                            >
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">Заказы</a>
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">Доставки</a>
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">Избранное</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Shop">
+                    <div class="footer__content__title">Магазин</div>
+                    <ul class="footer__content__menu">
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">Цветы</a>
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link"
+                            >Мягкие игрушки</a
+                            >
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">Подарки</a>
+                        </li>
+                        <li class="footer__content__menu__item">
+                            <a href="" class="footer__content__menu__link">Распродажи</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vl"></div>
+            </div>
 
-  <div class="footer__content__right">
-    <div class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <ul class="contacts__list">
-        <li class="contacts__list__item"><img src="{% static 'icons/Message.svg' %}" alt=""><a class="contacts__list__link" href="">{{ mail }}</a></li>
-        <li class="contacts__list__item"><img src="{% static 'icons/Pin_alt.svg' %}" alt=""><a class="contacts__list__link" href="">Москва, ул. Первомайская д. 100</a></li>
-        <li class="contacts__list__item"><img src="{% static 'icons/Phone_fill.svg' %}" alt=""><a class="contacts__list__link" href="">+79914025052 &nbsp;</a>
-          <a href="" class="contacts__list__link">+79990955411</a></li>
+            <div class="footer__content__right">
+                <div class="contacts">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <ul class="contacts__list">
+                        <li class="contacts__list__item"><img src="{% static 'icons/Message.svg' %}" alt=""><a
+                                class="contacts__list__link" href="">{{ mail }}</a></li>
+                        <li class="contacts__list__item"><img src="{% static 'icons/Pin_alt.svg' %}" alt=""><a
+                                class="contacts__list__link" href="">Москва, ул. Первомайская д. 100</a></li>
+                        <li class="contacts__list__item"><img src="{% static 'icons/Phone_fill.svg' %}" alt=""><a
+                                class="contacts__list__link" href="">+79914025052 &nbsp;</a>
+                            <a href="" class="contacts__list__link">+79990955411</a></li>
 
-      </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">&copy; Copyright 2022, All Rights Reserved</div>
     </div>
-  </div>
-</div>
-<hr>
-<div class="copyright">&copy; Copyright 2022, All Rights Reserved</div>
-{% endblock %}
+</footer>
