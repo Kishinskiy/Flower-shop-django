@@ -22,7 +22,6 @@ def home(request):
     return render(request, 'landing/index.html', context)
 
 
-
 def by_rubric(request, rubric_id):
     bbs = Bb.objects.filter(rubric=rubric_id)
     rubrics = Rubric.objects.all()
@@ -34,8 +33,6 @@ def by_rubric(request, rubric_id):
     }
 
     return render(request, 'landing/goods.html', context)
-
-
 
 
 class BbCreateView(CreateView):
