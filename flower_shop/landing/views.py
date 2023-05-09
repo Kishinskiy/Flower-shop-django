@@ -31,6 +31,10 @@ def by_rubric(request, rubric_id):
     return render(request, 'landing/goods.html', context)
 
 
+def footer(request):
+    render(request, 'landing/footer.html')
+
+
 class BbCreateView(CreateView):
     template_name = 'landing/create.html'
     form_class = BbForm

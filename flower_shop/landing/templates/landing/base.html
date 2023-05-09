@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fa-Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--MainStyle-->
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}" />
+    <title>{% block title %}{% endblock %} - Магазин цветов и подорков</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <img src="{% static 'img/Logo.svg' %}" alt="" class="logo" />
+          <ul class="mainmenu">
+            <li class="mainmenu__item">
+              <a href="" class="mainmenu__link">Главная</a>
+            </li>
+            <li class="mainmenu__item">
+              <a href="" class="mainmenu__link">О Нас</a>
+            </li>
+            <li class="mainmenu__item">
+              <a href="" class="mainmenu__link">Новости</a>
+            </li>
+            <li class="mainmenu__item">
+              <a href="" class="mainmenu__link">Магазин</a>
+            </li>
+            <li class="mainmenu__item">
+              <a href="" class="mainmenu__link">Блог</a>
+            </li>
+            <li class="mainmenu__item">
+              <a href="" class="mainmenu__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="shopmenu">
+            <li class="shopmenu_item">
+              <a href="" class="shopmenu__link"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </li>
+            <li class="shopmenu_item">
+              <a href="" class="shopmenu__link"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+            </li>
+            <li class="shopmenu_item">
+              <a href="" class="shopmenu__link"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </li>
+            <li class="shopmenu_item">
+              <a href="" class="shopmenu__link"
+                ><i class="fa-sharp fa-bag-shopping"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+    <div class="populate">
+      <div class="container">
+        <h2 class="section_title">Популярные товары</h2>
+        <div class="populate__cards">
+          {% for item in items %}
+          <div class="populate__cards__item card">
+            <div class="sale"></div>
+            <div class="new"></div>
+            <img class="card__image" src="{{ item.image.url }}" alt="" />
+            <div class="rating"></div>
+            <div class="card__description">
+              <div class="card__description__text">{{ item.title }}</div>
+              <div class="card__price">{{ item.price}} руб.</div>
+            </div>
+            <button class="btn card__btn">В корзину</button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        {%include "landing/footer.html" %}
+      </div>
+    </footer>
+    <!--Fa-Fonts-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
